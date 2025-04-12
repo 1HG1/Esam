@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download More RAM (Sketchy)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .sketchy-border {
+            border: 2px dashed #f59e0b; /* Tailwind's amber-500 */
+            border-radius: 6px; /* Tailwind's rounded-md */
+        }
+        .sketchy-shadow {
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2); /* Subtle shadow */
+        }
+        .glowing-text {
+            text-shadow: 0 0 8px rgba(255, 223, 0, 0.8); /* Glowing effect, light yellow */
+        }
+        . наклоненный {
+             transform: rotate(-2deg);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-800 to-gray-900 text-white p-4">
+    <div class="container mx-auto p-6 bg-black/50 rounded-lg sketchy-border sketchy-shadow">
+        <h1 class="text-3xl font-bold text-center mb-8 glowing-text наклоненный">Download More RAM!</h1>
+        <div class="text-center mb-6">
+            <img src="https://placehold.co/400x200/EEE/31343C?text=Download+RAM&font=Roboto" alt="Download RAM" class="mx-auto rounded-md sketchy-border mb-4">
+            <p class="text-gray-300 text-lg">
+                Tired of slow performance? Download more RAM and boost your computer's speed!
+            </p>
+        </div>
+        <div class="bg-yellow-500/20 p-4 rounded-md mb-6 border border-yellow-500/30">
+            <p class="text-yellow-300 text-center text-md">
+                <span class="font-semibold">Important:</span> This is a joke website.  Downloading RAM is not possible.
+            </p>
+        </div>
+
+        <div class="text-center">
+            <button id="download-button" class="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out sketchy-shadow text-lg">
+                DOWNLOAD RAM NOW!
+            </button>
+            <p id="status-text" class="mt-4 text-gray-400"></p>
+        </div>
+    </div>
+
+    <script>
+        const downloadButton = document.getElementById('download-button');
+        const statusText = document.getElementById('status-text');
+
+        downloadButton.addEventListener('click', () => {
+            statusText.textContent = "Downloading 64GB of RAM... (Just kidding!)";
+            // Simulate a download with a delay
+            setTimeout(() => {
+                statusText.textContent = "Your computer is now 1337% faster! (Not really, please don't try this at home).";
+            }, 2000); // 2 seconds
+        });
+    </script>
+</body>
+</html>
